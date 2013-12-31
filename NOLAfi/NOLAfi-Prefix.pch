@@ -1,0 +1,101 @@
+/*------------------------------------------------------------------------------------*/
+//
+// Prefix header for all source files of the 'iNewOrleans' target in the 'iNewOrleans' project
+//
+/*------------------------------------------------------------------------------------*/
+
+#import <Availability.h>
+
+/*------------------------------------------------------------------------------------*/
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+	#import <UIKit/UIKit.h>
+	#import <Foundation/Foundation.h>
+	#import <QuartzCore/QuartzCore.h>
+	#import <AVFoundation/AVFoundation.h>
+	#import <AudioToolbox/AudioToolbox.h>
+	#import <CoreLocation/CoreLocation.h>
+	#import <MapKit/MapKit.h>
+	#import <GLKit/GLKMath.h>
+	#import <objc/runtime.h>
+
+	#import "JAM.h"
+	#import "JSON.h"
+	#import "AppDelegate.h"
+	#import "RequestManager.h"
+#endif
+
+/*------------------------------------------------------------------------------------*/
+
+#define USE_PAYPAL							0
+
+#define kNolaHostAddress					@"nolaconcierge.com.php5-22.dfw1-1.websitetestlink.com/api/v1"
+#define kNolaAPIKey							@"yIbwvUOrgprTdZnZB55g"
+
+#define kFacebookAppID						@"327522434009289"
+#define kFacebookAppSecret					@"66c4cfe70ef90cb502b0ffb46752aaed"
+
+#if USE_PAYPAL
+#define kPayPalClientID						@"AfrB6RAdJcQ4mXVKmuxbTeH8PE0o1do8UhK15lXUX7PJiNiQEaZP5hjA1oyf"
+#define kPayPalRecevierEmailAddress			@"jmorin927@gmail.com"
+#endif // #if USE_PAYPAL
+
+#define kRegisterUsernameKey				@"kRegisterUsernameKey"
+#define kRegisterPasswordKey				@"kRegisterPasswordKey"
+
+#define kNolaDataKey						@"kNolaDataKey"
+#define kWelcomeKey							@"kWelcomeKey"
+#define kContentViewKey						@"kContentViewKey"
+#define kQuestionGenderKey					@"kQuestionGenderKey"
+#define kQuestionAgeKey						@"kQuestionAgeKey"
+#define kQuestionExperienceKey				@"kQuestionExperienceKey"
+#define kQuestionWhenKey					@"kQuestionWhenKey"
+#define kQuestionActivitiesKey				@"kQuestionActivitiesKey"
+#define kQuestionFoodKey					@"kQuestionFoodKey"
+#define kQuestionMusicKey					@"kQuestionMusicKey"
+#define kQuestionAccommodationsKey			@"kQuestionAccommodationsKey"
+
+#define kAccountButtonNotification			@"kAccountButtonNotification"
+#define kSearchButtonNotification			@"kSearchButtonNotification"
+#define kEventsButtonNotification			@"kEventsButtonNotification"
+#define kPlacesButtonNotification			@"kPlacesButtonNotification"
+#define kConciergeButtonNotification		@"kConciergeButtonNotification"
+#define kTicketsButtonNotification			@"kTicketsButtonNotification"
+#define kAboutButtonNotification			@"kAboutButtonNotification"
+
+#define kRequestWWOZEventsNotification		@"kRequestWWOZEventsNotification"
+#define kHomeShowHideDrawerNotification		@"kHomeShowHideDrawerNotification"
+#define kConciergeNextNotification			@"kConciergeNextNotification"
+#define kConciergePrevNotification			@"kConciergePrevNotification"
+#define kConciergeSelectedNotification		@"kConciergeSelectedNotification"
+#if DEBUG
+#define kTestWWOZVenuesButtonNotification	@"kTestWWOZVenuesButtonNotification"
+#define kTestWWOZEventsButtonNotification	@"kTestWWOZEventsButtonNotification"
+#define kTestNOLAPlacesButtonNotification	@"kTestNOLAPlacesButtonNotification"
+#define kTestOrderSaveButtonNotification	@"kTestOrderSaveButtonNotification"
+#define kTestProductsButtonNotification		@"kTestProductsButtonNotification"
+#define kTestArtistsButtonNotification		@"kTestArtistsButtonNotification"
+#define kTestPayPalButtonNotification		@"kTestPayPalButtonNotification"
+#endif // #if DEBUG
+
+#define kSecsPerDay							((24 * 60) * 60)
+#define kHomeScreenToolbarHeight			44
+
+#define kWWOZStreamUrl						@"http://www.wwoz.org/listen/hi-mp3"
+#define kWWOZDonateUrl						@"http://www.wwoz.org/donate.php?utm_source=wwozsidebar&utm_medium=wwozsite&utm_campaign=pledge&utm_content=pledgeadslikehear"
+#define kBusTicketsUrl						@"http://www.citysightseeingneworleans.com"
+
+/*------------------------------------------------------------------------------------*/
+// Global externs
+/*------------------------------------------------------------------------------------*/
+
+extern NSString * globalShortMonthArray[];
+extern NSString * globalMonthArray[];
+extern NSString * globalShortDayOfWeekArray[];
+extern NSString * globalDayOfWeekArray[];
+
+/*------------------------------------------------------------------------------------*/
